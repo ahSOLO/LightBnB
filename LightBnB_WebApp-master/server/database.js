@@ -1,3 +1,13 @@
+const { Pool } = require('pg');
+const args = process.argv.slice(2);
+
+const pool = new Pool({
+  user: 'vagrant',
+  password: '123',
+  host: 'localhost',
+  database: 'lightbnb'
+});
+
 const properties = require('./json/properties.json');
 const users = require('./json/users.json');
 
